@@ -1,4 +1,4 @@
-package com.example.repondeur
+package com.example.repondeur.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
