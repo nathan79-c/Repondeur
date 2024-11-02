@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("com.google.devtools.ksp")  version "2.0.0-1.0.21"
 }
 
 android {
@@ -51,6 +52,8 @@ android {
 
 dependencies {
 
+    val room_version = "2.6.1"
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -69,4 +72,13 @@ dependencies {
 
         // Material 3 theme
     implementation ("androidx.compose.material3:material3:1.3.0")
+
+    implementation(libs.androidx.room.runtime)
+    annotationProcessor(libs.room.compiler)
+
+    // To use Kotlin annotation processing tool (kapt)
+
+    // To use Kotlin Symbol Processing (KSP)
+    ksp(libs.room.compiler)
+
 }
