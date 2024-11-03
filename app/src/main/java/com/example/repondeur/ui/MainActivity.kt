@@ -1,5 +1,6 @@
 package com.example.repondeur.ui
 
+import android.Manifest
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -14,6 +15,12 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.repondeur.ui.theme.RepondeurTheme
 
 class MainActivity : ComponentActivity() {
+
+    private val permissions = arrayOf(
+        Manifest.permission.READ_PHONE_STATE,
+        Manifest.permission.ANSWER_PHONE_CALLS,
+        Manifest.permission.RECORD_AUDIO
+    )
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
