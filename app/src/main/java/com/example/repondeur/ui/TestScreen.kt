@@ -6,4 +6,12 @@ import androidx.compose.runtime.Composable
 fun Greeting(name: String) {
 
 
+
+}
+
+@Composable
+fun Testing(name: String) {
+
+
+
 }
